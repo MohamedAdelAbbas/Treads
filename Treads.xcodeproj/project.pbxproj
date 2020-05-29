@@ -15,6 +15,7 @@
 		761CF6352480BE750084804B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CF6332480BE750084804B /* Main.storyboard */; };
 		761CF6372480BE780084804B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761CF6362480BE780084804B /* Assets.xcassets */; };
 		761CF63A2480BE780084804B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CF6382480BE780084804B /* LaunchScreen.storyboard */; };
+		76F3AD462480ED6B0057010F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 76F3AD452480ED6B0057010F /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		761CF6362480BE780084804B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761CF6392480BE780084804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761CF63B2480BE780084804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F3AD452480ED6B0057010F /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		761CF61F2480BE750084804B = {
 			isa = PBXGroup;
 			children = (
+				76F3AD452480ED6B0057010F /* .swiftlint.yml */,
 				761CF62A2480BE750084804B /* Treads */,
 				761CF6292480BE750084804B /* Products */,
 				521A9406844F75269E3EDDCA /* Pods */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F3AD462480ED6B0057010F /* .swiftlint.yml in Resources */,
 				761CF63A2480BE780084804B /* LaunchScreen.storyboard in Resources */,
 				761CF6372480BE780084804B /* Assets.xcassets in Resources */,
 				761CF6352480BE750084804B /* Main.storyboard in Resources */,
