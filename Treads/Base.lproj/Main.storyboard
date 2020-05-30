@@ -171,6 +171,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGM-J8-JsP">
                                 <rect key="frame" x="270" y="645" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="JKs-nY-3FB" eventType="touchUpInside" id="hDx-km-kPb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-ur-o4s">
                                 <rect key="frame" x="154" y="671.66666666666663" width="86" height="22"/>
@@ -213,6 +216,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qro-Es-u2Y"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="ect-yz-nk5" id="gI1-Sn-gc9"/>
+                        <outlet property="durationLabel" destination="lZW-GT-BT8" id="MV9-a7-SdJ"/>
+                        <outlet property="paceLabel" destination="gxe-tR-yHs" id="uiF-CP-c3P"/>
+                        <outlet property="pauseBtn" destination="yGM-J8-JsP" id="EYW-Gz-kGT"/>
                         <outlet property="sliderImageView" destination="UPd-7e-LDt" id="48R-BE-PqU"/>
                         <outlet property="swipeBGImageView" destination="f9v-eb-ipd" id="KP8-zq-gHA"/>
                     </connections>

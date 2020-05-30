@@ -7,11 +7,12 @@ disabled_rules: # rule identifiers to exclude from running
 - identifier_name
 - void_return
 - unused_optional_binding
-
+- shorthand_operator
 
 opt_in_rules: # Enable rules not from the default set.
 - empty_count
 - empty_string
+
 
 #Customized Rules
 line_length:
