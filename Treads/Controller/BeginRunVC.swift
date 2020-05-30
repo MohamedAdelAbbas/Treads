@@ -4,10 +4,11 @@
 //
 //  Created by Mohamed Adel on 5/29/20.
 //  Copyright © 2020 Mohamed Adel. All rights reserved.
-//
+// 
 
 import UIKit
 import MapKit
+
 class BeginRunVC: LocationVC {
 
     // MARK: Outlets
