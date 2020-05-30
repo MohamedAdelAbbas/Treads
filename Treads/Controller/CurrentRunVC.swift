@@ -25,6 +25,7 @@ class CurrentRunVC: LocationVC {
     var runDistance = 0.0
     var timer = Timer()
     var counter = 0
+    var pace = 0
     // MARK: View Controller Life Cycle
     
     
@@ -42,6 +43,9 @@ class CurrentRunVC: LocationVC {
         manager?.distanceFilter = 10
         startRun()
     }
+    
+    // MARK: Self Defined Methods
+    
     func startRun() {
         manager?.startUpdatingLocation()
         startTimer()
@@ -59,6 +63,10 @@ class CurrentRunVC: LocationVC {
         counter += 1
         durationLabel.text = counter.formatTimeDurationToString()
     }
+    func calculatePace(time seconds: Int, miles: Double) -> String {
+        pace = Int(Double(seconds) / miles)
+        return pace.formatTimeDurationToString()
+    }
     
     // MARK: Action
     @IBAction func pauseBtnPressed(_ sender: UIButton) {
@@ -67,7 +75,6 @@ class CurrentRunVC: LocationVC {
     
     // MARK: Class Methods
     
-    // MARK: Self Defined Methods
     @objc func endRunSwiped(sender: UIPanGestureRecognizer) {
         let minAdjust: CGFloat = 80
         let maxAdjust: CGFloat = 128
@@ -108,6 +115,9 @@ extension CurrentRunVC: CLLocationManagerDelegate {
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = "\(runDistance.metersToMiles(places: 2))"
+            if counter > 0  && runDistance > 0 {
+                paceLabel.text = calculatePace(time: counter, miles: runDistance.metersToMiles(places: 2))
+            }
         }
         lastLocation = locations.last
     }
