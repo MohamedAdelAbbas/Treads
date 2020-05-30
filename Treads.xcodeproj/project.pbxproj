@@ -18,6 +18,7 @@
 		765A5CF5248243ED004C5C6B /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CF4248243EC004C5C6B /* LocationVC.swift */; };
 		765A5CF724826030004C5C6B /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CF624826030004C5C6B /* CurrentRunVC.swift */; };
 		765A5CF924827930004C5C6B /* Meter+Data+Time convert Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CF824827930004C5C6B /* Meter+Data+Time convert Ext.swift */; };
+		765A5CFB24831DDF004C5C6B /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CFA24831DDF004C5C6B /* Run.swift */; };
 		76BF7C0F2481F874004A6690 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7BFD2481F86E004A6690 /* Montserrat-ExtraLight.ttf */; };
 		76BF7C102481F874004A6690 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7BFE2481F86E004A6690 /* Montserrat-Black.ttf */; };
 		76BF7C112481F874004A6690 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7BFF2481F86F004A6690 /* Montserrat-Medium.ttf */; };
@@ -55,6 +56,7 @@
 		765A5CF4248243EC004C5C6B /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		765A5CF624826030004C5C6B /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		765A5CF824827930004C5C6B /* Meter+Data+Time convert Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meter+Data+Time convert Ext.swift"; sourceTree = "<group>"; };
+		765A5CFA24831DDF004C5C6B /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		76BF7BFD2481F86E004A6690 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		76BF7BFE2481F86E004A6690 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		76BF7BFF2481F86F004A6690 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		76F3AD492481C4990057010F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				765A5CFA24831DDF004C5C6B /* Run.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				765A5CF5248243ED004C5C6B /* LocationVC.swift in Sources */,
+				765A5CFB24831DDF004C5C6B /* Run.swift in Sources */,
 				761CF6322480BE750084804B /* RunLogVC.swift in Sources */,
 				761CF6302480BE750084804B /* BeginRunVC.swift in Sources */,
 				761CF62C2480BE750084804B /* AppDelegate.swift in Sources */,
