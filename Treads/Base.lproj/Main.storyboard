@@ -170,6 +170,10 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGM-J8-JsP">
                                 <rect key="frame" x="270" y="645" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="G7K-Oy-gR2"/>
+                                    <constraint firstAttribute="height" constant="75" id="NqI-n4-fpf"/>
+                                </constraints>
                                 <state key="normal" image="pauseButton"/>
                                 <connections>
                                     <action selector="pauseBtnPressed:" destination="JKs-nY-3FB" eventType="touchUpInside" id="hDx-km-kPb"/>
@@ -188,6 +192,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xYU-ur-o4s" firstAttribute="centerY" secondItem="f9v-eb-ipd" secondAttribute="centerY" id="7M3-bJ-gIg"/>
+                            <constraint firstItem="yGM-J8-JsP" firstAttribute="leading" secondItem="xYU-ur-o4s" secondAttribute="trailing" constant="30" id="ByN-fI-7TK"/>
                             <constraint firstItem="uaj-eX-OMN" firstAttribute="top" secondItem="aY0-hM-Qk1" secondAttribute="top" constant="35" id="EqB-vS-mWI"/>
                             <constraint firstItem="6oQ-8x-7se" firstAttribute="top" secondItem="aY0-hM-Qk1" secondAttribute="top" id="J14-f5-X0z"/>
                             <constraint firstItem="wiz-kb-b59" firstAttribute="trailing" secondItem="aY0-hM-Qk1" secondAttribute="trailing" id="LfG-kp-gBg"/>
@@ -200,7 +205,6 @@
                             <constraint firstItem="Oyq-gs-8ko" firstAttribute="centerX" secondItem="wiz-kb-b59" secondAttribute="centerX" id="dUQ-Jc-sHj"/>
                             <constraint firstItem="Oyq-gs-8ko" firstAttribute="centerY" secondItem="wiz-kb-b59" secondAttribute="centerY" id="izg-SG-JE4"/>
                             <constraint firstItem="lZW-GT-BT8" firstAttribute="centerX" secondItem="YQH-tD-6Lq" secondAttribute="centerX" id="ka1-Fo-Xo0"/>
-                            <constraint firstItem="yGM-J8-JsP" firstAttribute="leading" secondItem="f9v-eb-ipd" secondAttribute="trailing" constant="-22" id="kda-VZ-yvZ"/>
                             <constraint firstItem="f9v-eb-ipd" firstAttribute="top" secondItem="UCO-m7-nks" secondAttribute="bottom" constant="110.33" id="nFn-ta-WKh"/>
                             <constraint firstItem="uaj-eX-OMN" firstAttribute="centerX" secondItem="YQH-tD-6Lq" secondAttribute="centerX" id="naA-ge-m5e"/>
                             <constraint firstItem="lZW-GT-BT8" firstAttribute="top" secondItem="uaj-eX-OMN" secondAttribute="bottom" constant="35" id="nhs-5e-F0Y"/>
