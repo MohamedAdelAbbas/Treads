@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="-191.30434782608697" y="54.910714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Current RunVC-->
         <scene sceneID="dUi-w8-2AM">
             <objects>
-                <viewController id="JKs-nY-3FB" sceneMemberID="viewController">
+                <viewController id="JKs-nY-3FB" customClass="CurrentRunVC" customModule="Treads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQH-tD-6Lq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,12 +98,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-8x-7se">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-ur-o4s">
-                                <rect key="frame" x="154" y="671.66666666666663" width="86" height="22"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OnRun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-eX-OMN">
                                 <rect key="frame" x="175.33333333333334" y="35" width="63.333333333333343" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
@@ -178,6 +172,12 @@
                                 <rect key="frame" x="270" y="645" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-ur-o4s">
+                                <rect key="frame" x="154" y="671.66666666666663" width="86" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-7e-LDt">
                                 <rect key="frame" x="73" y="654" width="57" height="57"/>
                             </imageView>
@@ -212,6 +212,10 @@
                         <viewLayoutGuide key="safeArea" id="aY0-hM-Qk1"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qro-Es-u2Y"/>
+                    <connections>
+                        <outlet property="sliderImageView" destination="UPd-7e-LDt" id="48R-BE-PqU"/>
+                        <outlet property="swipeBGImageView" destination="f9v-eb-ipd" id="KP8-zq-gHA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jys-re-zX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
