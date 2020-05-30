@@ -23,7 +23,8 @@ class CurrentRunVC: LocationVC {
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var runDistance = 0.0
-    
+    var timer = Timer()
+    var counter = 0
     // MARK: View Controller Life Cycle
     
     
@@ -43,11 +44,20 @@ class CurrentRunVC: LocationVC {
     }
     func startRun() {
         manager?.startUpdatingLocation()
-        
+        startTimer()
     }
     func endRun() {
         manager?.stopUpdatingLocation()
         
+    }
+    func startTimer() {
+        durationLabel.text = counter.formatTimeDurationToString()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounter() {
+        counter += 1
+        durationLabel.text = counter.formatTimeDurationToString()
     }
     
     // MARK: Action
@@ -91,7 +101,7 @@ extension CurrentRunVC: CLLocationManagerDelegate {
             checkLocationAuthStatus()
         }
     }
-     // Runner location updating to Label
+    // Runner location updating to Label
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if startLocation == nil {
             startLocation = locations.first
