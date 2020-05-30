@@ -9,14 +9,14 @@ disabled_rules: # rule identifiers to exclude from running
 - unused_optional_binding
 
 
-opt_in_rules:
+opt_in_rules: # Enable rules not from the default set.
 - empty_count
 - empty_string
 
 #Customized Rules
 line_length:
     warning: 250
-    error: 400
+    error: 300
     ignores_function_declarations: true
     ignores_comments: true
     ignores_urls: true

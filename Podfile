@@ -7,5 +7,5 @@ target 'Treads' do
 
   # Pods for Treads 
    pod 'SwiftLint'
-
+   pod 'RealmSwift'
 end
