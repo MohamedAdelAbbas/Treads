@@ -45,6 +45,8 @@ class BeginRunVC: LocationVC {
         manager?.stopUpdatingLocation()
     }
     
+    // MARK: Self Defined Methods
+    
     func setupMapView() {
         if let overlay = addLastRunToMap() {
             if runMapView.overlays.count > 0 {
@@ -72,7 +74,31 @@ class BeginRunVC: LocationVC {
         for location in lastRun.locations {
             coordinate.append(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
         }
+        runMapView.userTrackingMode = .none
+        runMapView.setRegion(centerMapOnPrevRoute(locations: lastRun.locations), animated: true)
+        
         return MKPolyline(coordinates: coordinate, count: lastRun.locations.count)
+    }
+    func centerMapOnUserLocation() {
+        runMapView.userTrackingMode = .follow
+        let coordinateRegion = MKCoordinateRegion(center: runMapView.userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        runMapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func centerMapOnPrevRoute(locations: List<Location>) -> MKCoordinateRegion {
+        guard let initialLoc =  locations.first else { return MKCoordinateRegion() }
+        var minLat = initialLoc.latitude
+        var minLng = initialLoc.longitude
+        var maxLat = minLat
+        var maxLng =  minLng
+        
+        for location in locations {
+            minLat = min(minLat, location.latitude)
+            minLng = min(minLng, location.longitude)
+            maxLat = max(maxLat, location.latitude)
+            maxLng = max(maxLng, location.longitude)
+        }
+        return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (minLat + maxLat)/2, longitude: (minLng + maxLng)/2), span: MKCoordinateSpan(latitudeDelta: (maxLat - minLat)*1.4, longitudeDelta: (maxLng - minLng)*1.4))
     }
     
     // MARK: Action
@@ -80,15 +106,14 @@ class BeginRunVC: LocationVC {
         lastRunStack.isHidden = true
         lastRunBGView.isHidden = true
         lastRunCloseBtn.isHidden = true
+        centerMapOnUserLocation()
+
     }
     
     @IBAction func locationCenterBtnPressed(_ sender: UIButton) {
+        centerMapOnUserLocation()
+
     }
-    
-    // MARK: Class Methods
-    
-    
-    // MARK: Self Defined Methods
     
 }
 
