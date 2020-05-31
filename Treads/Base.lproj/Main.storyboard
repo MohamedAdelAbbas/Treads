@@ -249,12 +249,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SX6-yu-hTC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SX6-yu-hTC">
                                 <rect key="frame" x="0.0" y="131" width="414" height="682"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogCell" rowHeight="82" id="clN-bI-Nr0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RunLogCell" rowHeight="82" id="clN-bI-Nr0" customClass="RunLogCell" customModule="Treads" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="clN-bI-Nr0" id="7Pi-mv-i88">
@@ -305,16 +305,26 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxr-J1-3zB">
+                                                    <rect key="frame" x="0.0" y="79" width="414" height="3"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="ut0-CW-eKO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="iEE-cD-KnA" firstAttribute="leading" secondItem="7Pi-mv-i88" secondAttribute="leadingMargin" constant="8" id="4cx-U2-vWL"/>
                                                 <constraint firstItem="87q-I0-pvd" firstAttribute="centerY" secondItem="7Pi-mv-i88" secondAttribute="centerY" id="5ld-96-pVx"/>
+                                                <constraint firstAttribute="bottom" secondItem="xxr-J1-3zB" secondAttribute="bottom" id="AnB-dt-OOg"/>
                                                 <constraint firstItem="iEE-cD-KnA" firstAttribute="centerY" secondItem="7Pi-mv-i88" secondAttribute="centerY" id="CcW-09-AxI"/>
                                                 <constraint firstItem="yjK-tM-IsP" firstAttribute="top" secondItem="7Pi-mv-i88" secondAttribute="top" id="Irp-ZK-m3E"/>
                                                 <constraint firstItem="X5b-lk-h5P" firstAttribute="centerY" secondItem="7Pi-mv-i88" secondAttribute="centerY" id="JyQ-m8-Klr"/>
                                                 <constraint firstAttribute="trailing" secondItem="yjK-tM-IsP" secondAttribute="trailing" id="SeY-nd-DLs"/>
                                                 <constraint firstItem="87q-I0-pvd" firstAttribute="centerX" secondItem="7Pi-mv-i88" secondAttribute="centerX" id="V49-w2-tez"/>
+                                                <constraint firstAttribute="trailing" secondItem="xxr-J1-3zB" secondAttribute="trailing" id="YkN-fY-00n"/>
+                                                <constraint firstItem="xxr-J1-3zB" firstAttribute="leading" secondItem="7Pi-mv-i88" secondAttribute="leading" id="eZU-Bq-wtB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="X5b-lk-h5P" secondAttribute="trailing" constant="8" id="frI-9I-Qfu"/>
                                                 <constraint firstItem="yjK-tM-IsP" firstAttribute="leading" secondItem="7Pi-mv-i88" secondAttribute="leading" id="hul-k4-fUq"/>
                                                 <constraint firstAttribute="bottom" secondItem="yjK-tM-IsP" secondAttribute="bottom" id="mQ6-R4-RXQ"/>
@@ -322,8 +332,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="averagePaceLabel" destination="PFk-KY-Umf" id="ttV-Px-19k"/>
+                                            <outlet property="dateLabel" destination="X5b-lk-h5P" id="RND-RN-u2W"/>
+                                            <outlet property="runDurationLabel" destination="RFe-gE-puE" id="ggr-dN-548"/>
+                                            <outlet property="totalDistancelabel" destination="XPg-NE-D9S" id="1i1-AF-KTr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="7Kd-wT-VvW"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="gvG-gR-z2r"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -342,10 +362,13 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Log" image="tabbar-myLogIconGray" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="logTableView" destination="SX6-yu-hTC" id="HH7-6F-U3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="55"/>
+            <point key="canvasLocation" x="1505.7971014492755" y="54.910714285714285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

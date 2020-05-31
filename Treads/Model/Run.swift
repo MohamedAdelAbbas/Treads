@@ -46,7 +46,7 @@ class Run: Object {
                 try realm.write {
                     realm.add(run)
                     try realm.commitWrite()
-                 //   print(realm.configuration.fileURL)
+                    print(realm.configuration.fileURL)
                 }
             } catch {
                 debugPrint("Error adding run to realm!")

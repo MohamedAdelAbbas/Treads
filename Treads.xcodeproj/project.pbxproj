@@ -20,6 +20,7 @@
 		765A5CF924827930004C5C6B /* Meter+Data+Time convert Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CF824827930004C5C6B /* Meter+Data+Time convert Ext.swift */; };
 		765A5CFB24831DDF004C5C6B /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CFA24831DDF004C5C6B /* Run.swift */; };
 		765A5CFD248321F8004C5C6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5CFC248321F8004C5C6B /* Constants.swift */; };
+		765A5D01248332F9004C5C6B /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A5D00248332F9004C5C6B /* RunLogCell.swift */; };
 		76BF7C0F2481F874004A6690 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7BFD2481F86E004A6690 /* Montserrat-ExtraLight.ttf */; };
 		76BF7C102481F874004A6690 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7BFE2481F86E004A6690 /* Montserrat-Black.ttf */; };
 		76BF7C112481F874004A6690 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7BFF2481F86F004A6690 /* Montserrat-Medium.ttf */; };
@@ -59,6 +60,7 @@
 		765A5CF824827930004C5C6B /* Meter+Data+Time convert Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meter+Data+Time convert Ext.swift"; sourceTree = "<group>"; };
 		765A5CFA24831DDF004C5C6B /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		765A5CFC248321F8004C5C6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		765A5D00248332F9004C5C6B /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 		76BF7BFD2481F86E004A6690 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		76BF7BFE2481F86E004A6690 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		76BF7BFF2481F86F004A6690 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		76F3AD482481C48E0057010F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				765A5D00248332F9004C5C6B /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				765A5CFB24831DDF004C5C6B /* Run.swift in Sources */,
 				761CF6322480BE750084804B /* RunLogVC.swift in Sources */,
 				761CF6302480BE750084804B /* BeginRunVC.swift in Sources */,
+				765A5D01248332F9004C5C6B /* RunLogCell.swift in Sources */,
 				761CF62C2480BE750084804B /* AppDelegate.swift in Sources */,
 				765A5CF924827930004C5C6B /* Meter+Data+Time convert Ext.swift in Sources */,
 				765A5CF724826030004C5C6B /* CurrentRunVC.swift in Sources */,
