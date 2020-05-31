@@ -28,31 +28,51 @@ class BeginRunVC: LocationVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationAuthStatus()
-        runMapView.delegate = self
        // print("here are my Runs : \( Run.getAllRuns())")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         manager?.delegate = self
-        manager?.stopUpdatingLocation()
-        getLastRun()
+        runMapView.delegate = self
+        manager?.startUpdatingLocation()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        setupMapView()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         manager?.stopUpdatingLocation()
     }
-    func getLastRun() {
-        guard let lastRun = Run.getAllRuns()?.first else {
+    
+    func setupMapView() {
+        if let overlay = addLastRunToMap() {
+            if runMapView.overlays.count > 0 {
+                runMapView.removeOverlays(runMapView.overlays)
+            }
+            runMapView.addOverlay(overlay)
+            
+            lastRunStack.isHidden = false
+            lastRunBGView.isHidden = false
+            lastRunCloseBtn.isHidden = false
+        } else {
             lastRunStack.isHidden = true
             lastRunBGView.isHidden = true
             lastRunCloseBtn.isHidden = true
-            return }
-        lastRunStack.isHidden = false
-        lastRunBGView.isHidden = false
-        lastRunCloseBtn.isHidden = false
+        }
+    }
+    
+    func addLastRunToMap() -> MKPolyline? {
+        guard let lastRun = Run.getAllRuns()?.first else { return nil }
         paceLabel.text = lastRun.pace.formatTimeDurationToString()
-        distanceLabel.text = "\(lastRun.distance.metersToMiles(places: 2))mi"
+        distanceLabel.text = "\(lastRun.distance.metersToMiles(places: 2)) mi"
         durationLabel.text = lastRun.duration.formatTimeDurationToString()
+        
+        var coordinate =  [CLLocationCoordinate2D]()
+        for location in lastRun.locations {
+            coordinate.append(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+        }
+        return MKPolyline(coordinates: coordinate, count: lastRun.locations.count)
     }
     
     // MARK: Action
@@ -80,4 +100,12 @@ extension BeginRunVC: CLLocationManagerDelegate {
             runMapView.userTrackingMode = .follow
         }
     }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+           let polyline = overlay as! MKPolyline
+           let renderer = MKPolylineRenderer(polyline: polyline)
+           renderer.strokeColor  = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+           renderer.lineWidth = 4
+           return renderer
+       }
 }

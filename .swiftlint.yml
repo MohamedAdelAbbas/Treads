@@ -11,8 +11,9 @@ disabled_rules: # rule identifiers to exclude from running
 - unused_closure_parameter
 - control_statement
 
+
 opt_in_rules: # disabled by default (i.e., you have to explicitly enable them in your configuration file)
-- empty_count
+
 - empty_string
 
 
