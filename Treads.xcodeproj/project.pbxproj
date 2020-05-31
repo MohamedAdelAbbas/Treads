@@ -40,6 +40,7 @@
 		76BF7C1E2481F874004A6690 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7C0C2481F873004A6690 /* Montserrat-ExtraLightItalic.ttf */; };
 		76BF7C1F2481F874004A6690 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7C0D2481F873004A6690 /* Montserrat-Italic.ttf */; };
 		76BF7C202481F874004A6690 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BF7C0E2481F874004A6690 /* Montserrat-ExtraBoldItalic.ttf */; };
+		76CA59AC24836C5500CD57E4 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA59AB24836C5500CD57E4 /* RealmConfig.swift */; };
 		76F3AD462480ED6B0057010F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 76F3AD452480ED6B0057010F /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		76BF7C0C2481F873004A6690 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		76BF7C0D2481F873004A6690 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		76BF7C0E2481F874004A6690 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		76CA59AB24836C5500CD57E4 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		76F3AD452480ED6B0057010F /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				765A5CFC248321F8004C5C6B /* Constants.swift */,
+				76CA59AB24836C5500CD57E4 /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				765A5CF724826030004C5C6B /* CurrentRunVC.swift in Sources */,
 				761CF62E2480BE750084804B /* SceneDelegate.swift in Sources */,
 				765A5CFD248321F8004C5C6B /* Constants.swift in Sources */,
+				76CA59AC24836C5500CD57E4 /* RealmConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
