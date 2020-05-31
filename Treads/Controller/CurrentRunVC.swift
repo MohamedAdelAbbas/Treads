@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class CurrentRunVC: LocationVC {
     // MARK: Outlets
@@ -55,6 +56,7 @@ class CurrentRunVC: LocationVC {
     func endRun() {
         manager?.stopUpdatingLocation()
         // Add Our Object to Realm
+         Run.addRunToRealm(pace: pace, distance: runDistance, duration: counter)
     }
     func pauseRun() {
         startLocation = nil
